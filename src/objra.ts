@@ -1,3 +1,28 @@
+/**
+ *
+ * @param regex matcher string or RegExp
+ * @param str replacement string
+ * @param obj source object
+ * @example
+ * import objectReplaceAll from 'objra'
+ *
+ * // Input:
+ * objectReplaceAll('*', 'input', {
+ *  './*': {
+ *    types: './dist/*.d.ts',
+ *    import: './dist/*.js',
+ *  },
+ * })
+ *
+ * // Output:
+ * {
+ *  './input': {
+ *   types: './dist/input.d.ts',
+ *   import: './dist/input.js',
+ *  },
+ * }
+ *
+ */
 export default function objectReplaceAll(
   regex: string | RegExp,
   str: string,
